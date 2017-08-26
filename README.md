@@ -64,66 +64,74 @@ See folder **"example"** to get sample program.
 
 ## Interface
 ```cpp
-/**
- * Adds a pointer to an object in the tree.
- *   DOES NOT make a copy of the object!
- *
- * @param ptr A non-null pointer to a key
- */
-void push( const T* ptr );
+    /**
+     * Erase the whole content of the tree.
+     */
+    void clear();
+
+    /**
+     * Adds a pointer to an object in the tree.
+     *   DOES NOT make a copy of the object!
+     *
+     * @param ptr A non-null pointer to a key
+     */
+    void push( const T* ptr );
 
 
-/**
- * Adds a new object in the tree.
- *   DOES NOT make a copy of the object!
- *
- * @param ref A reference to a key
- */
-void push( const T& ref );
+    /**
+     * Adds a new object in the tree.
+     *   DOES NOT make a copy of the object!
+     *
+     * @param ref A reference to a key
+     */
+    void push( const T& ref );
 
 
-/**
- * Removes a key from the tree.
- * @param ref The key.
- */
-void removeKey( const T& ref );
+    /**
+     * Removes a key from the tree.
+     * @param ref The key.
+     */
+    void removeKey( const T& ref );
 
 
-/**
- * Checks whether or not a key is present in the tree.
- * @param  ref The key.
- * @return     bool.
- */
-bool findKey( const T& ref );
+    /**
+     * Checks whether or not a key is present in the tree.
+     * @param  ref The key.
+     * @return     bool.
+     */
+    bool findKey( const T& ref );
 
 
-/**
- * Checks whether or not the tree is empty.
- * @return bool
- */
-bool isEmpty();
+    /**
+     * Checks whether or not the tree is empty.
+     * @return bool
+     */
+    bool isEmpty();
 
 
-/**
- * Returns the minimal element of the tree.
- */
-T& getMin();
+    /**
+     * Returns the minimal element of the tree.
+     */
+    T& getMin();
 
 
-/**
- * Returns the maximal element of the tree.
- */
-T& getMax();
+    /**
+     * Returns the maximal element of the tree.
+     */
+    T& getMax();
 
 
-/**
- * Returns the minimal element of the tree and REMOVES it from the container.
- */
-T& popMin();
+    /**
+     * Returns the minimal element of the tree and REMOVES it from the container.
+     */
+    T& popMin();
 
 
-/**
- * Returns the maximal element of the tree and REMOVES it from the container.
- */
-T& popMax();
+    /**
+     * Returns the maximal element of the tree and REMOVES it from the container.
+     */
+    T& popMax();
+
+    AvlTree();
+    virtual ~AvlTree();
 ```
